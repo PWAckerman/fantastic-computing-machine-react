@@ -1,0 +1,40 @@
+import 'babel-polyfill';
+import React from 'react';
+import configureStore from  './store/configureStore';
+import {Provider} from 'react-redux';
+import { render } from 'react-dom';
+import App from './App';
+import { Router, Route, Link, browserHistory , IndexRedirect } from 'react-router';
+import Home from './components/home/Home';
+import Education from './components/education/Education';
+import MicroBlog from './components/microblog/Microblog';
+import Projects from './components/projects/Projects';
+import Contact from './components/contact/Contact';
+import UserService from './services/user.service';
+import { loadUser } from './actions/userActions.js';
+
+const userService = new UserService();
+userService.getUser().then((data)=>{
+    console.log(data);
+}).catch((err)=>{
+    console.log(err);
+})
+
+const store = configureStore();
+store.dispatch(loadUser());
+
+render(
+    <Provider store={store}>
+        <Router history={browserHistory}>
+            <Route path="/" component={App}>
+                <IndexRedirect to="/home"/>
+                <Route path="home" component={Home}></Route>
+                <Route path="projects" component={Projects}></Route>
+                <Route path="microblog" component={MicroBlog}></Route>
+                <Route path="contact" component={Contact}></Route>
+                <Route path="education" component={Education}></Route>
+            </Route>
+        </Router>
+    </Provider>,
+    document.getElementById('root')
+)

@@ -1,0 +1,2 @@
+export const GET_USER_SUCCESS = 'GET_USER_SUCCESS';
+export const SET_CURRENT_SKILL = 'SET_CURRENT_SKILL';
