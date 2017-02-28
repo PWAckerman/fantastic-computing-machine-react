@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import InstitutionContainer from './InstitutionContainer';
 
-class Education extends Component {
+export class Education extends Component {
      render(){
          return <div>
-            Education {JSON.stringify(this.props.user.education)}
+            Education
+            <div>{this.props.education.map((institution)=>{
+                return <InstitutionContainer institution={institution}/>
+            })}</div>
          </div>
      }
 }
 
 function mapStateToProps(state){
     return {
-        user: state.user.user
+        education: state.user.user.education
     }
 }
 

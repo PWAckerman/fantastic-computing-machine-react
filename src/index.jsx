@@ -10,8 +10,12 @@ import Education from './components/education/Education';
 import MicroBlog from './components/microblog/Microblog';
 import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
+import EmailForm from './components/contact/EmailForm';
+import TextMessageForm from './components/contact/TextMessageForm';
 import UserService from './services/user.service';
 import { loadUser } from './actions/userActions.js';
+import { loadEntries } from './actions/entryActions.js';
+import './App.scss';
 
 const userService = new UserService();
 userService.getUser().then((data)=>{
@@ -22,6 +26,7 @@ userService.getUser().then((data)=>{
 
 const store = configureStore();
 store.dispatch(loadUser());
+store.dispatch(loadEntries());
 
 render(
     <Provider store={store}>
@@ -31,7 +36,10 @@ render(
                 <Route path="home" component={Home}></Route>
                 <Route path="projects" component={Projects}></Route>
                 <Route path="microblog" component={MicroBlog}></Route>
-                <Route path="contact" component={Contact}></Route>
+                <Route path="contact" component={Contact}>
+                    <Route path="email" component={EmailForm}></Route>
+                    <Route path="text" component={TextMessageForm}></Route>
+                </Route>
                 <Route path="education" component={Education}></Route>
             </Route>
         </Router>

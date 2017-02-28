@@ -1,0 +1,28 @@
+$font-stack:    Helvetica, sans-serif;
+$topDarkBlue: #000D61;
+$bottomDarkBlue: #002F9E;
+$smartphone: 'only screen and (min-device-width : 320px) and (max-device-width : 480px)';
+$smartphone-landscape: 'only screen and (min-width : 321px)';
+$smartphone-portrait: 'only screen and (max-width : 320px)';
+$ipad: 'only screen and (min-device-width : 768px) and (max-device-width : 1024px)';
+$ipad-landscape: 'only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)';
+$ipad-portrait: 'only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)';
+$desktop: 'only screen and (min-width : 1024px)';
+
+@mixin bg-gradient(){
+    background: -webkit-linear-gradient(bottom right, $topDarkBlue 0%, $bottomDarkBlue 100%);
+    background: -moz-linear-gradient(bottom right, $topDarkBlue 0%, $bottomDarkBlue 100%);
+    background: -ms-linear-gradient(bottom right, $topDarkBlue 0%, $bottomDarkBlue 100%);
+}
+
+@mixin element($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin modifier($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}

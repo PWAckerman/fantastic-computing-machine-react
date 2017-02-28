@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PageLink from '../PageLink';
 import MenuIcon from './MenuIcon';
+import './SideMenu.scss';
 
 class SideMenu extends Component {
      constructor(props){
@@ -11,7 +12,7 @@ class SideMenu extends Component {
      }
 
      render(){
-         return <div>
+         return <div className="side-menu">
                      <ul>
                         <li style={this.black}><MenuIcon linkIcon="icon-basic-folder-multiple"/><PageLink linkPath="/projects" linkName="Projects"/></li>
                         <li style={this.black}><MenuIcon linkIcon="icon-basic-notebook"/><PageLink linkPath="/education" linkName="Education"/></li>

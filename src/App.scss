@@ -1,0 +1,9 @@
+@import './sass/base';
+
+body{
+    @include bg-gradient();
+    background-attachment: fixed;
+    padding: none;
+    font-family: $font-stack;
+    margin: 0px;
+}

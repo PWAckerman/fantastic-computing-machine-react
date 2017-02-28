@@ -1,9 +1,13 @@
 import React from 'react';
+import './CurrentSkill.scss';
 
 const CurrentSkill = ({currentSkill, visibilityFilter})=>{
-    console.log(currentSkill);
     if(currentSkill){
-        return <div><img src={currentSkill.icon}/></div>
+        return <div className={[visibilityFilter, "current-skill"].join(" ")}>
+                    <img className="current-skill__icon" src={currentSkill.icon}/>
+                    <div className="current-skill__name">{currentSkill.name}</div>
+                    <div className="current-skill__type">{currentSkill.type}</div>
+               </div>
     } else {
         return <div></div>;
     }

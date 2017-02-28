@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import PageLink from '../PageLink';
 
-class Contact extends Component {
+export class Contact extends Component {
      render(){
          return <div>
             Contact
+            <PageLink linkPath="/contact/email" linkName="Email"/>
+            <PageLink linkPath="/contact/text" linkName="Text"/>
+            <div>{this.props.children}</div>
          </div>
      }
 }
 
-export default Contact;
+function mapStateToProps(state){
+    return {
+        user: state.user.user
+    }
+}
+
+export default connect(mapStateToProps)(Contact);

@@ -8,7 +8,11 @@ process.env.NODE_ENV = 'production';
 const compiler = webpack(webpackConfig)
 //run the webpack compiler
 //callback returns error, statistics parameters
-compiler.run((err,stats) => {
+compiler.watch({ // watch options:
+    aggregateTimeout: 300, // wait so long for more changes
+    poll: true // use polling instead of native watchers
+    // pass a number to set the polling interval
+}, (err,stats) => {
   if(err){
     console.log(err.bold.red)
     //return failure

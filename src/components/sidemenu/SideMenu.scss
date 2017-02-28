@@ -1,0 +1,19 @@
+@import '../../sass/base';
+
+.side-menu{
+    position: fixed;
+    right: -200px;
+    height: 100vh;
+    background-color: rgb(0, 76, 139);
+    width: 200px;
+    transition: .5s;
+}
+
+.side-menu-out{
+    position: fixed;
+    right: 0px;
+    height: 100vh;
+    background-color: rgb(0, 76, 139);
+    width: 200px;
+    transition: .5s;
+}

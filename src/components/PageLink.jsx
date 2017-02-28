@@ -3,9 +3,9 @@ import { Link } from 'react-router';
 
 const PageLink = ({ linkName, linkPath })=>{
     return (
-        <div>
+        <button className={["navlink"].join('')}>
             <Link to={linkPath}>{linkName}</Link>
-        </div>)
+        </button>)
 }
 
 PageLink.propTypes = {

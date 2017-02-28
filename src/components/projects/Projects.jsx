@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import ProjectContainer from './ProjectContainer';
 
-class Projects extends Component {
+export class Projects extends Component {
      render(){
          return <div>
-            Projects {JSON.stringify(this.props.user.projects)}
+            Projects
+            {this.props.projects.map((project)=>{ return <ProjectContainer key={project._id} project={project} />})}
          </div>
      }
 }
 
+Projects.propTypes = {
+    projects: React.PropTypes.array
+}
+
 function mapStateToProps(state){
     return {
-        user: state.user.user,
+        projects: state.user.user.projects,
     }
 }
 

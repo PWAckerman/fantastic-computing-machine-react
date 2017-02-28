@@ -9,7 +9,7 @@ fs.readFile('index.html', 'utf8', (err, markup)=>{
 
   const $ = cheerio.load(markup);
 
-  $('head').prepend('<link rel="stylesheet" href="styles.css">')
+  $('head').prepend('<link rel="stylesheet" href="./assets/styles.css">')
 
   $('#bundle').attr("src", "prodbundle.js")
 

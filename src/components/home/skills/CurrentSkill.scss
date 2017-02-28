@@ -1,0 +1,79 @@
+@import '../../../sass/base';
+
+.current-skill{
+
+    @media #{$smartphone} {
+        position: fixed;
+        width: 100%;
+        top: 60px;
+        height: 60px;
+        background-color: rgba(117, 117, 117, 0.56);
+        text-align: center;
+        @include element('icon'){
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 40px;
+            height: auto;
+            float: left;
+        }
+        @include element('name'){
+            display: inline-block;
+            line-height: 25px;
+            font-size: 20px;
+            font-weight: 500;
+            color: white;
+            width: 100%;
+        }
+        @include element('type'){
+            display: inline-block;
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: 300;
+            color: white;
+            width: 100%;
+        }
+    }
+    @media #{$ipad} {
+        @include element('icon'){
+
+        }
+        @include element('name'){
+
+        }
+        @include element('type'){
+
+        }
+    }
+    @media #{$desktop} {
+        position: fixed;
+        top: 80px;
+        left: 20px;
+        width: 200px;
+        min-height: 200px;
+        background-color: rgba(117, 117, 117, 0.56);
+        display: inline-block;
+        text-align: center;
+        padding: 10px;
+        @include element('icon'){
+            width: 150px;
+            height: auto;
+            display: inline-block;
+        }
+        @include element('name'){
+            font-size: 20px;
+            font-weight: 500;
+            width: 100%;
+            color: white;
+            display: inline-block;
+        }
+        @include element('type'){
+            font-size: 18px;
+            font-weight: 300;
+            width: 100%;
+            color: white;
+            display: inline-block;
+        }
+
+    }
+}

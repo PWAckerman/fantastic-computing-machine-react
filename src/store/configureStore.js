@@ -1,7 +1,7 @@
 import {createStore, applyMiddleware} from 'redux';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import rootReducer from '../reducers';
-import thunk from 'redux-thunk'
+import thunk from 'redux-thunk';
 
 const middleware = [reduxImmutableStateInvariant(), thunk];
 

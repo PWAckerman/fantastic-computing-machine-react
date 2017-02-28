@@ -4,7 +4,7 @@ import SideMenu from './components/sidemenu/SideMenu';
 
 class App extends Component {
     render(){
-        return <div>
+        return <div className="container-fluid">
                     <NavBar />
                     <SideMenu />
                     <div>{React.cloneElement(this.props.children)}</div>
