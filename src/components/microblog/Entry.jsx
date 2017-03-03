@@ -1,14 +1,19 @@
 import React from 'react';
 import Tag from './Tag';
+import formatDate from '../../helpers/formatDate';
+
+import './Entry.scss';
 
 const Entry = ({entry, avatar})=>{
     return (
         <li className="entry-list-item">
-            <div>
-                <img className="entry-list-item__avatar" src={avatar} alt="profile-picture" />
-                <div className="entry-list-item__date">{entry.date}</div>
-                <div className="entry-list-item__text">{entry.text}</div>
-                {entry.tags ? entry.tags.map((tag) => <Tag tag={tag}/>) : ''}
+            <div className="avatar-block">
+                <img className="avatar-block__avatar" src={avatar} alt="profile-picture" />
+            </div>
+            <div className="text-block">
+                <div className="text-block__date">{formatDate(entry.date)}</div>
+                <div className="text-block__text">{entry.text}</div>
+                {entry.tags ? entry.tags.map((tag, inx) => <Tag key={inx} tag={tag}/>) : ''}
             </div>
         </li>
     )

@@ -1,5 +1,16 @@
 @import '../../../sass/base';
 
+.SKILL_VISIBLE{
+    display: inline-block;
+    transition: .5s;
+    opacity: 1;
+}
+
+.SKILL_INVISIBLE{
+    transition: .5s;
+    opacity: 0;
+}
+
 .current-skill{
 
     @media #{$smartphone} {

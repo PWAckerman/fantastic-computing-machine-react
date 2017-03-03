@@ -1,0 +1,43 @@
+@import '../../sass/base';
+
+.entry-list-item{
+    width: 100%;
+    display: inline-block;
+    min-height: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.avatar-block{
+    width: 70px;
+    height: 200px;
+    display: inline-block;
+    vertical-align: top;
+    @include element('avatar'){
+        width: 60px;
+        height: 60px;
+        border-radius: 40px;
+        vertical-align: top;
+    }
+}
+
+.text-block{
+    display: inline-block;
+    width: 70%;
+    text-align: left;
+    @include element('date'){
+        font-weight: 400;
+    }
+
+    @include element('text'){
+        font-weight: 200;
+    }
+}
+
+.more{
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    margin-bottom: 20px;
+}

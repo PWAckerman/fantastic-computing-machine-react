@@ -1,7 +1,8 @@
 import React from 'react';
+import { setCurrentSkill } from '../../../actions/skillActions';
 import './CurrentSkill.scss';
 
-const CurrentSkill = ({currentSkill, visibilityFilter})=>{
+const CurrentSkill = ({currentSkill, visibilityFilter, select})=>{
     if(currentSkill){
         return <div className={[visibilityFilter, "current-skill"].join(" ")}>
                     <img className="current-skill__icon" src={currentSkill.icon}/>

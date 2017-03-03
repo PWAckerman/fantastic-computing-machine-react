@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import ProjectContainer from './ProjectContainer';
+import { HeaderSpacer } from '../shared/HeaderSpacer';
 
 export class Projects extends Component {
      render(){
-         return <div>
-            Projects
-            {this.props.projects.map((project)=>{ return <ProjectContainer key={project._id} project={project} />})}
+         return <div className="container">
+
+
+            <h1>Projects</h1>
+            {this.props.projects.reverse().map((project)=>{ return <ProjectContainer key={project._id} project={project} />})}
          </div>
      }
 }

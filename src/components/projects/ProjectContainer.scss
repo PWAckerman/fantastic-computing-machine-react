@@ -1,0 +1,50 @@
+@import '../../sass/base';
+
+.project{
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    background-color: rgba(254, 254, 254, 0.18);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.description-block{
+    display: inline-block;
+    width: auto;
+    max-width: 500px;
+    max-height: 400px;
+    vertical-align: top;
+    padding-left: 20px;
+    font-weight: 300;
+    overflow-y: scroll;
+    @include element('title'){
+        font-size: 30px;
+        font-weight: 500;
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+    }
+    @include element('description'){
+        font-size: 15px;
+        font-weight: 300;
+        display: inline-block;
+        text-align: left;
+    }
+}
+
+.screenshot-block{
+    display: inline-block;
+    width: 300px;
+    height: auto;
+    max-height: 400px;
+    overflow-y: hidden;
+    @include element('screenshot'){
+        width: 300px;
+        height: auto;
+        display: inline-block;
+    }
+}

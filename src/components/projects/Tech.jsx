@@ -1,4 +1,5 @@
 import React from 'react';
+import './Tech.scss';
 
 const Tech = ({tech})=>{
     return (

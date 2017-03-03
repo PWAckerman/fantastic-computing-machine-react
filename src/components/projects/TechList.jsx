@@ -1,9 +1,10 @@
 import React from 'react';
 import Tech from './Tech';
+import './TechList.scss';
 
 const TechList = ({techs})=>{
     return (
-        <div>
+        <div className="tech-list">
         {techs.map((tech)=> <Tech key={tech._id} tech={tech}/>)}
         </div>
     )

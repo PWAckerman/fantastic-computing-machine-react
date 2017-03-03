@@ -1,6 +1,7 @@
 import * as types from '../actions/actionTypes';
 
 export default function entriesReducer(state=[], action){
+    console.log("entries reducer");
     switch(action.type){
         case types.GET_ENTRY_SUCCESS:
             console.log(action.entries);
@@ -10,11 +11,4 @@ export default function entriesReducer(state=[], action){
         default:
             return state;
     };
-}
-
-function tagParser(entries){
-    return entries.map((entry)=>{
-        entry.tags = entry.text.match(/#[a-z]*/ig);
-        return entry;
-    })
 }

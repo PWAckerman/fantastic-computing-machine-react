@@ -2,7 +2,7 @@ import React from 'react';
 
 const PageLink = function({ linkIcon }){
     return (
-        <div >
+        <div className="menu-icon">
             <i className={linkIcon}></i>
         </div>)
 }

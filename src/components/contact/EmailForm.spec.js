@@ -13,5 +13,6 @@ describe('<EmailForm />', () => {
         <EmailForm />
     );
     expect(EmailForm.prototype.render.calledOnce).to.equal(true);
+    renderSpy.restore();
   });
 });

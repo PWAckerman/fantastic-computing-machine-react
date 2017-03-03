@@ -23,11 +23,4 @@ describe('<MicroBlog />', () => {
       componentWillMountSpy.restore();
     });
 
-    it('calls dispatch', () => {
-      dispatch = spy();
-      const wrapper = mount(
-          <MicroBlog entries={entries} user={user} dispatch={dispatch}/>
-      );
-      expect(dispatch.calledOnce).to.equal(true);
-    });
 });

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Line.scss';
 
 const Line = ({line})=>{
     return (<div className="line">{line}</div>)

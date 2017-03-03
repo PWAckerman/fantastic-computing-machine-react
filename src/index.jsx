@@ -3,7 +3,7 @@ import React from 'react';
 import configureStore from  './store/configureStore';
 import {Provider} from 'react-redux';
 import { render } from 'react-dom';
-import App from './App';
+import App from './components/App';
 import { Router, Route, Link, browserHistory , IndexRedirect } from 'react-router';
 import Home from './components/home/Home';
 import Education from './components/education/Education';
@@ -15,7 +15,6 @@ import TextMessageForm from './components/contact/TextMessageForm';
 import UserService from './services/user.service';
 import { loadUser } from './actions/userActions.js';
 import { loadEntries } from './actions/entryActions.js';
-import './App.scss';
 
 const userService = new UserService();
 userService.getUser().then((data)=>{

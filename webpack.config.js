@@ -18,7 +18,7 @@ module.exports = {
     //we want debug output
   debug: true,
   //we want to get those source-maps, which help us match minified code to development code
-  devtool: 'source-map',
+  devtool: 'eval-cheap-module-source-map',
   //dev middleware option
   noInfo: false,
   //entry point to build our bundle from (top level app/component)
@@ -51,7 +51,9 @@ module.exports = {
     loaders: [
       { test: /\.jsx?$/, include: path.join(__dirname, 'src'),
         loader: 'babel',
-        query: { presets: ['react','es2015'] }
+        query: {
+            "presets": ['react','es2015'],   
+            "plugins": ["transform-object-rest-spread", "transform-decorators-legacy"] }
       },
       { test: /\.scss$/,
         loaders: ["style-loader", "css-loader", "sass-loader"]

@@ -1,0 +1,27 @@
+@import '../../sass/base';
+
+.institution{
+    background-color: rgba(255, 255, 255, 0.34);
+    width: 100%;
+    display: inline-block;
+    @include element('image'){
+        width: 100px;
+        height: auto;
+        display: inline-block;
+    }
+    @include element('name'){
+        display: inline-block;
+    }
+    @include element('location'){
+        display: inline-block;
+    }
+    @include element('degree'){
+        display: inline-block;
+    }
+    @include element('attended'){
+        display: inline-block;
+    }
+    @include element('description'){
+        display: inline-block;
+    }
+}

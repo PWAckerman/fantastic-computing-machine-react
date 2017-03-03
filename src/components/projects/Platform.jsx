@@ -1,8 +1,9 @@
 import React from 'react';
+import './Platform.scss';
 
 const Platform = ({platform})=>{
     return (
-        <div className="platform"><img className="platform__icon" src={platform.icon}/></div>
+        <div className="platform"><i className={[`icon-${platform.icon}`, "platform__icon"].join(' ')}></i></div>
     )
 }
 

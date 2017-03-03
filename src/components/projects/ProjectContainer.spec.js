@@ -7,7 +7,7 @@ import ProjectContainer from './ProjectContainer';
 
 describe('<ProjectContainer />', () => {
   const project = {
-      screenshot: 'project.placeholder.jpg',
+      screenshot: './project.placeholder.jpg',
       title: 'Test Project',
       description: 'A project',
       technologies: [],
@@ -21,8 +21,10 @@ describe('<ProjectContainer />', () => {
   });
   it('should render', () => {
       expect(Component.length).to.equal(1);
-      expect(Component.find('.project__screenshot').prop('src')).to.equal('project.placeholder.jpg');
-      expect(Component.find('.project__title').text()).to.equal('Test Project');
-      expect(Component.find('.project__description').text()).to.equal('A project');
+      expect(Component.find('.description-block__title').text()).to.equal('Test Project<PlatformList />');
+      expect(Component.find('.description-block__description').text()).to.equal('A project');
   });
+  it('should tranform the source path of the screenshot', ()=>{
+      expect(Component.find('.screenshot-block__screenshot').prop('src')).to.equal('./assets/project.placeholder.jpg');
+  })
 });
