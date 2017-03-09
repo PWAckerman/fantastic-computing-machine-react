@@ -41,15 +41,15 @@ describe('<Skill />', () => {
       expect(Component.find('.skill__icon').prop("src")).to.equal("placeholder.jpg");
   });
 
-  it('should call select on mouseleave after 3 seconds', () => {
-      Component.find('.skill').simulate('mouseleave');
-      setTimeout(()=>{
-          expect(select.count).to.equal(1);
-      },3500);
+  it('should call select on mouseenter', () => {
+      Component.find('.skill').simulate('mouseenter');
+      expect(select.count).to.equal(1);
+      select.count = 0;
   });
 
-  it('should call select on mouseover', () => {
-      Component.find('.skill').simulate('mouseover');
-      expect(select.count).to.equal(1);
+  it('should call select on mouseleave', () => {
+      Component.find('.skill').simulate('mouseleave');
+      expect(select.count).to.equal(2);
+      select.count = 0;
   });
 });

@@ -4,9 +4,10 @@ import './Skill.scss';
 
 const Skill = ({skill, select, currentSkill})=>{
     return (
-        <div className="skill" onMouseOver={()=> select(setCurrentSkill(skill, 'SKILL_VISIBLE'))} onMouseLeave={()=> setTimeout(()=> select(setCurrentSkill('', 'SKILL_INVISIBLE')), 5000)}>
-         <img className="skill__icon" src={skill.icon} />
-        </div>)
+            <div className="skill" onMouseEnter={()=> select(setCurrentSkill(skill, 'SKILL_VISIBLE'))} onMouseLeave={()=> select(setCurrentSkill('', 'SKILL_INVISIBLE'))}>
+             <img className="skill__icon" src={skill.icon} />
+            </div>
+            )
 }
 
 Skill.propTypes = {

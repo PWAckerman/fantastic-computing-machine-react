@@ -25,10 +25,10 @@ describe('<InstitutionContainer />', () => {
   })
   it('should render', () => {
       expect(Component.length).to.equal(1);
-      expect(Component.find('.institution__image').prop('src')).to.equal('placeholder.img');
-      expect(Component.find('.institution__name').text()).to.equal('Test University');
-      expect(Component.find('.institution__location').text()).to.equal('America, USA');
-      expect(Component.find('.institution__degree').text()).to.equal('Masters of Stuff');
-      expect(Component.find('.institution__attended').text()).to.equal('1900-2000');
+      expect(Component.find('.institution-image-block__image').prop('src')).to.equal('placeholder.img');
+      expect(Component.find('.institution-text-block__name').text()).to.equal('Test University');
+      expect(Component.find('.institution-text-block__location').text()).to.equal('America, USA');
+      expect(Component.find('.institution-text-block__degree').text()).to.equal('Masters of Stuff');
+      expect(Component.find('.institution-text-block__attended').text()).to.equal('1900-2000');
   });
 });

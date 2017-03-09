@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:js": "node prod.build.js",
+    "build:js": "mocha --require ./test/testBabel.js 'src/components/**/*.spec.js' && node prod.build.js",
     "build:html": "node buildHTML.js",
     "test": "mocha --require ./test/testBabel.js 'src/components/**/*.spec.js'",
     "coverage": "istanbul cover -x 'specs/**/*.js' ./bin/runner.js 'specs/**/*.js' html text-summary",

@@ -31,10 +31,21 @@
     width: 100%;
     text-align: left;
     padding-left: 10px;
+    padding-top: 5px;
     font-size: 15px;
     line-height: 40px;
     display: inline-block;
     height: 40px;
+    transition: .2s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.47);
+        transition: .2s;
+        & .menu-icon{
+            color: rgb(213, 218, 176);
+            transition: .2s;
+        }
+    }
 }
 
 .list-item .nav-link{

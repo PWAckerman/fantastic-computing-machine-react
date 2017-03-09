@@ -10,23 +10,66 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.avatar-block{
-    width: 70px;
-    height: 200px;
-    display: inline-block;
-    vertical-align: top;
-    @include element('avatar'){
-        width: 60px;
-        height: 60px;
-        border-radius: 40px;
+@media #{$smartphone}{
+    .avatar-block{
+        width: 20%;
+        display: inline-block;
         vertical-align: top;
+        float: left;
+        @include element('avatar'){
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            vertical-align: top;
+            margin-left: 15px;
+            display: inline-block;
+        }
+    }
+}
+
+@media #{$ipad} {
+    .avatar-block{
+        width: 20%;
+        display: inline-block;
+        vertical-align: top;
+        float: left;
+        @include element('avatar'){
+            width: 60px;
+            height: 60px;
+            border-radius: 40px;
+            vertical-align: top;
+            margin-left: 15px;
+            display: inline-block;
+
+        }
+    }
+}
+
+
+@media #{$desktop} {
+    .avatar-block{
+        width: 20%;
+        display: inline-block;
+        vertical-align: top;
+        float: left;
+        @include element('avatar'){
+            width: 60px;
+            height: 60px;
+            border-radius: 40px;
+            vertical-align: top;
+            margin-left: 15px;
+            display: inline-block;
+
+        }
     }
 }
 
 .text-block{
     display: inline-block;
-    width: 70%;
+    width: 79%;
     text-align: left;
+    white-space: normal;
+    word-wrap: break-word;
     @include element('date'){
         font-weight: 400;
     }

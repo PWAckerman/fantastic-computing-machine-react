@@ -4,9 +4,7 @@ import tagParser from '../../helpers/tagParser';
 
 import './EntryList.scss';
 
-const EntryList = ({entryList, avatar, callback, range})=>{
-    console.log(range);
-    console.log(entryList.length);
+const EntryList = ({ entryList, avatar, callback, range })=>{
     return (
         <div className="entry-list">
             <ul>

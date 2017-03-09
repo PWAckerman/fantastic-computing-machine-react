@@ -5,8 +5,39 @@
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
+    display: inline-block;
+    text-align: center;
     @include element('video'){
-        width: 100%;
-        height: auto;
+        display: inline-block;
+        @media #{$smartphone}{
+            position: relative;
+            left: -30%;
+            width: auto;
+            height: 100%;
+        }
+        @media #{$desktop}{
+            width: 100%;
+            height: auto;
+        }
+        @media #{$ipad}{
+            position: relative;
+            left: -30%;
+            width: auto;
+            height: 100%;
+        }
+    }
+    @include element('blurb'){
+        width: 50%;
+        display: inline-block;
+        font-size: 20px;
+        @media #{$smartphone}{
+
+        }
+        @media #{$desktop}{
+
+        }
+        @media #{$ipad}{
+
+        }
     }
 }

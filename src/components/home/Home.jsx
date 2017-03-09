@@ -3,8 +3,10 @@ import { connect } from 'react-redux';
 import { loadUser } from '../../actions/userActions.js';
 import HeroVideo from './HeroVideo';
 import SkillsContainer from './skills/SkillsContainer';
+import LearningContainer from './skills/LearningContainer';
 import CurrentSkill from './skills/CurrentSkill';
 import LoadingComponent from '../shared/LoadingComponent';
+import Table from '../shared/table/Table';
 import './Hero.scss';
 
 export class Home extends Component {
@@ -15,13 +17,15 @@ export class Home extends Component {
         this.props.dispatch(loadUser());
     }
 
-     render(){
+    render(){
          if(this.props.user){
-             return <div >
-                <HeroVideo videoSrc="./assets/videos/Hello-World/Hello-World"/>
-                <div className="container">
-                <SkillsContainer select={this.props.dispatch} skills={this.props.user.skills} currentSkill={this.props.skill || {}}/>
-                {this.props.skill ? <CurrentSkill select={this.props.dispatch} visibilityFilter={this.props.visibilityFilter} currentSkill={this.props.skill}/> : '' }</div>
+             return <div>
+                    <HeroVideo blurb={this.props.user.blurbs[0].blurb} name={this.props.user.name} videoSrc="./assets/videos/Hello-World/Hello-World"/>
+                    <div className="container">
+                    <SkillsContainer select={this.props.dispatch} skills={this.props.user.skills} currentSkill={this.props.skill || {}}/>
+                    <LearningContainer select={this.props.dispatch} learnings={this.props.user.learnings} currentSkill={this.props.skill || {}}/>
+                    {this.props.skill ? <CurrentSkill select={this.props.dispatch} visibilityFilter={this.props.visibilityFilter} currentSkill={this.props.skill}/> : '' }
+                    </div>
                 </div>
          } else if (!this.props.user){
              return <LoadingComponent />

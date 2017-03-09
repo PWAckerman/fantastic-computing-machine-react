@@ -8,7 +8,7 @@ ul{
 }
 
 input, button, input[type="button"],input[type="submit"]{
-    -webkit-appearance: none;
+   -webkit-appearance: none;
    -moz-appearance: none;
    appearance: none;
 }
@@ -51,6 +51,7 @@ a, a:visited{
 .nav-brand{
     float: left;
     padding: 5px;
+    display: inline-block;
     @include element('img'){
         width: 50px;
         height: auto;
@@ -69,9 +70,74 @@ a, a:visited{
     }
 }
 
-.navbar-header{
-    font-size: 15px;
-    width: 100%;
-    max-width: 1000px;
-    display: inline-block;
+
+@media #{$smartphone}{
+    .navbar-header{
+        font-size: 15px;
+        width: 100%;
+        max-width: 1000px;
+        font-weight: 200;
+        text-transform: uppercase;
+        display: inline-block;
+        @include element('left'){
+            display: none;
+            float: right;
+            width: auto;
+        }
+    }
+}
+
+@media #{$ipad}{
+    .navbar-header{
+        font-size: 15px;
+        width: 100%;
+        max-width: 1000px;
+        font-weight: 200;
+        text-transform: uppercase;
+        display: inline-block;
+        @include element('left'){
+            display: none;
+            float: right;
+            width: auto;
+        }
+    }
+}
+
+@media #{$desktop}{
+    .navbar-header{
+        font-size: 15px;
+        width: 100%;
+        max-width: 1000px;
+        font-weight: 200;
+        text-transform: uppercase;
+        display: inline-block;
+        @include element('left'){
+            display: inline-block;
+            float: right;
+            width: auto;
+        }
+    }
+}
+
+.nav-bar-header button{
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.nav-link{
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+th, td {
+    table-layout: fixed;
+    width: 100px;
+    resize: both;
+    text-overflow: ellipsis;
+}
+
+.custom-column{
+    width: 100px;
+    resize: both;
+    text-overflow: ellipsis;
 }

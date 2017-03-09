@@ -3,20 +3,14 @@ import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 
-import SkillsContainer from './SkillsContainer';
+import Meter from './Meter';
 
-describe('<SkillsContainer />', () => {
-  const skills = [{
-      icon: 'placeholder.jpg',
-      name: 'Generic Skill',
-      type: 'Library',
-      _id: 1
-  }];
-
+describe('<Meter />', () => {
   let Component;
+  let percentage = 90;
   beforeEach(()=>{
       Component = shallow(
-              <SkillsContainer skills={skills}/>
+              <Meter percentage={percentage} />
           )
   })
   it('should render', () => {

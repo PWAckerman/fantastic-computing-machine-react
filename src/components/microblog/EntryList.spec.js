@@ -10,7 +10,7 @@ describe('<EntryList />', () => {
   const entryList = [{
       _id: "fake-id",
       date: "Date",
-      text: "ipsum",
+      text: "ipsum #ipsum",
       tags: ["tag1","tag2"]
   }]
   let Component;
@@ -24,5 +24,5 @@ describe('<EntryList />', () => {
   it('should render', () => {
       expect(Component.length).to.equal(1);
   });
-  
+
 });

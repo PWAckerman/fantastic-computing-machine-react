@@ -7,6 +7,10 @@ body{
     font-family: $font-stack;
     margin: 0px;
     color: white;
+    &::selection{
+        background-color: rgb(205, 217, 130);
+        color: $bottomDarkBlue;
+    }
 }
 
 .row{

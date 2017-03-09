@@ -2,10 +2,31 @@
 
 .tech-list{
     position: absolute;
+    height: auto;
+    width: 100%;
     bottom: 0px;
 }
 
-.tech-spacer{
-    height: 60px;
-    width: 100%;
+.tech_list__center{
+    position: relative;
+    left: -50%
+}
+
+@media #{$smartphone}{
+    .tech-spacer{
+        height: 120px;
+        width: 100%;
+    }
+}
+@media #{$ipad}{
+    .tech-spacer{
+        height: 120px;
+        width: 100%;
+    }
+}
+@media #{$desktop}{
+    .tech-spacer{
+        height: 60px;
+        width: 100%;
+    }
 }

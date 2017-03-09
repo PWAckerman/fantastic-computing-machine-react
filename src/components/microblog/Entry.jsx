@@ -13,7 +13,7 @@ const Entry = ({entry, avatar})=>{
             <div className="text-block">
                 <div className="text-block__date">{formatDate(entry.date)}</div>
                 <div className="text-block__text">{entry.text}</div>
-                {entry.tags ? entry.tags.map((tag, inx) => <Tag key={inx} tag={tag}/>) : ''}
+                {entry.tags ? entry.tags.filter((tag) => tag.length > 1).map((tag, inx) => <Tag key={inx} tag={tag}/>) : ''}
             </div>
         </li>
     )

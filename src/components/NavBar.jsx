@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PageLink from './PageLink';
+import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { setMenuState } from '../actions/menuActions';
 import './shared.scss';
@@ -21,13 +22,15 @@ export class NavBar extends Component {
      render(){
          return <nav className="nav">
                     <div className="navbar-header">
-                        <PageLink linkPath="/projects" linkName="Projects"/>
-                        <PageLink linkPath="/education" linkName="Education"/>
-                        <PageLink linkPath="/microblog" linkName="Microblog"/>
-                        <a className="nav-link" href="https://medium.com/@patrickackerman">Medium</a>
-                        <PageLink linkPath="/contact/email" linkName="Contact"/>
-                        <div className="nav-brand" ><a href="/home"><img className="nav-brand__img" src='./assets/images/pwalogo.svg'/></a></div>
+                        <div className="nav-brand" ><Link to="/home"><img className="nav-brand__img" src='./assets/images/pwalogo.svg'/></Link></div>
                         <div className="burger-menu" onClick={this.onClick}><img className="burger-menu__icon" src="./assets/images/burger-menu.svg"/></div>
+                        <div className="navbar-header__left">
+                            <PageLink linkPath="/projects" linkName="Projects"/>
+                            <PageLink linkPath="/education" linkName="Education"/>
+                            <PageLink linkPath="/microblog" linkName="Microblog"/>
+                            <a className="nav-link" href="https://medium.com/@patrickackerman">Medium</a>
+                            <PageLink linkPath="/contact/email" linkName="Contact"/>
+                        </div>
                     </div>
                 </nav>
      }
