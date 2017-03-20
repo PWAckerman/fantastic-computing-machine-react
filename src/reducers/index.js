@@ -4,13 +4,15 @@ import skill from './skillReducer.js';
 import entries from './entriesReducer.js';
 import menu from './menuReducer.js'
 import range from './rangeReducer.js';
+import blurbs from './blurbsReducer.js';
 
 const rootReducer = combineReducers({
     user,
     skill,
     entries,
     menu,
-    range
+    range,
+    blurbs
 });
 
 export default rootReducer;

@@ -1,0 +1,12 @@
+@import '../../sass/base';
+
+.custom-video-player{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    @include element('video'){
+        width: 100%;
+        height: auto;
+    }
+}

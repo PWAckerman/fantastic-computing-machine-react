@@ -15,6 +15,7 @@ import TextMessageForm from './components/contact/TextMessageForm';
 import UserService from './services/user.service';
 import { loadUser } from './actions/userActions.js';
 import { loadEntries } from './actions/entryActions.js';
+import { loadBlurbs } from './actions/blurbActions.js';
 
 const userService = new UserService();
 userService.getUser().then((data)=>{
@@ -26,6 +27,7 @@ userService.getUser().then((data)=>{
 const store = configureStore();
 store.dispatch(loadUser());
 store.dispatch(loadEntries());
+store.dispatch(loadBlurbs());
 
 render(
     <Provider store={store}>

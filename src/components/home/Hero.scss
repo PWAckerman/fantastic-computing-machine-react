@@ -6,12 +6,13 @@
     overflow-x: hidden;
     overflow-y: hidden;
     display: inline-block;
+    position: relative;
     text-align: center;
     @include element('video'){
         display: inline-block;
         @media #{$smartphone}{
             position: relative;
-            left: -30%;
+            left: -50%;
             width: auto;
             height: 100%;
         }
@@ -27,9 +28,23 @@
         }
     }
     @include element('blurb'){
-        width: 50%;
+        width: 100%;
+        margin-top: 45vh;
         display: inline-block;
-        font-size: 20px;
+        position: absolute;
+        text-align: center;
+        z-index: 25;
+        @include element('quote'){
+            font-size: 30px;
+            font-weight: 400;
+            text-transform: uppercase;
+            width: 100%;
+        }
+        @include element('name'){
+            font-size: 20px;
+            font-weight: 300;
+            width: 100%;
+        }
         @media #{$smartphone}{
 
         }
@@ -40,4 +55,5 @@
 
         }
     }
+
 }

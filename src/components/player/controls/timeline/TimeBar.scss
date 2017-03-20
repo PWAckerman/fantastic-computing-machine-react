@@ -1,0 +1,33 @@
+@import '../../../../sass/base';
+
+.timebar{
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: -4px;
+    background-color: rgb(84, 84, 84);
+    height: 4px;
+    text-align: left;
+    cursor: pointer;
+    &:hover{
+        height: 8px;
+    }
+    @include element('inner-bar'){
+        background-color: $bottomDarkBlue;
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    @include element('cursor'){
+        cursor: pointer;
+        vertical-align: top;
+        position: relative;
+        top: 0px;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        display: inline-block;
+        background-color: white;
+    }
+}

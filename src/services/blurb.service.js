@@ -9,7 +9,7 @@ export default class BlurbService {
     }
 
     getBlurbs(userId='56af7da8d4c6d6ab9227851e'){
-        console.log('get entries');
+        console.log('get blurbs');
         let dfd = q.defer();
         let self = this;
         if(this.blurbs){

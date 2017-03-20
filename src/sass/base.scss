@@ -1,12 +1,12 @@
 $font-stack: 'Work Sans', sans-serif;
 $topDarkBlue: rgb(0, 76, 139);
 $bottomDarkBlue: rgb(3, 89, 159);
-$smartphone: 'only screen and (max-device-width : 480px)';
+$smartphone: 'only screen and (max-width : 480px)';
 $smartphone-landscape: 'only screen and (min-width : 321px)';
 $smartphone-portrait: 'only screen and (max-width : 320px)';
-$ipad: '(min-device-width : 480px) and (max-device-width : 1024px)';
-$ipad-landscape: 'only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)';
-$ipad-portrait: 'only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)';
+$ipad: '(min-width : 480px) and (max-width : 1024px)';
+$ipad-landscape: 'only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape)';
+$ipad-portrait: 'only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait)';
 $desktop: 'only screen and (min-width : 1024px)';
 
 @mixin bg-gradient(){

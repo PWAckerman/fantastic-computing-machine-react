@@ -1,0 +1,69 @@
+@import '../../../../sass/base';
+
+.volume-controller{
+    height: 100px;
+    width: 50px;
+    background-color: rgb(52, 52, 52);
+    position: relative;
+    top: -150px;
+    left: 0px;
+    display: inline-block;
+    text-align: center;
+    @include element('range'){
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        width: 70px;
+        height: 50px;
+        left: -13px;
+        top: 25px;
+        position: relative;
+        display: inline-block;
+    }
+}
+
+input[type=range]{
+  -webkit-appearance: slider-horizontal;
+  background: transparent; /* Otherwise white in Chrome */
+  &::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        appearance: none;
+        border: 4px solid #000000;
+        height: 36px;
+        width: 16px;
+        border-radius: 3px;
+        background: #ffffff;
+        cursor: pointer;
+        margin-top: -3px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  }
+  &::-moz-range-thumb{
+
+  }
+  &::-ms-thumb{
+
+  }
+  &::-webkit-slider-runnable-track {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 3px;
+        cursor: pointer;
+        background-color: rgba(34, 34, 34, 0.74);
+        border-radius: 0px;
+        border: none;
+  }
+  &::-moz-range-track {
+      width: 100%;
+      height: 8px;
+      cursor: pointer;
+      background-color: rgba(34, 34, 34, 0.74);
+      border-radius: 1px;
+      border: none;
+  }
+  &::-ms-track {
+      width: 100%;
+      height: 8px;
+      cursor: pointer;
+      background-color: rgba(34, 34, 34, 0.74);
+      border-radius: 1px;
+      border: none;
+  }
+}

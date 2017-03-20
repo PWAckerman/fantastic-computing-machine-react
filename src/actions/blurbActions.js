@@ -10,9 +10,10 @@ export function getBlurbSuccess(blurbs){
 
 export function loadBlurbs(dispatch, id){
     return function(dispatch){
-        userService
+        blurbService
             .getBlurbs(id)
             .then((blurbs)=>{
+                console.log(blurbs);
                 dispatch(getBlurbSuccess(blurbs));
             }).catch(error => {
                 throw(error);
