@@ -8,7 +8,7 @@ RUN apt-get update &&\
 
 RUN apt-get install --only-upgrade libssl1.0.0 openssl
 
-EXPOSE 8080
+EXPOSE 80
 
 COPY ./ ./
 
