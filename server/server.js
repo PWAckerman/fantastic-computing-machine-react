@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 
-app.use(express.static('../dist'));
+app.use(express.static(path.join(__dirname, '../dist'));
 
 //quick and dirty react server-side routing
 app.get('/', (req, res)=>{
