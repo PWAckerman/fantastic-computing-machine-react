@@ -1,5 +1,5 @@
 const constants = {
-    base: 'http://www.patrickackerman.io/api'
+    base: 'http://portfolio-ack.herokuapp.com/api'
 }
 
 export default constants;
