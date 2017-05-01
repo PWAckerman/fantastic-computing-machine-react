@@ -16,9 +16,9 @@ const GLOBALS = {
 
 module.exports = {
     //we want debug output
-  debug: true,
+  debug: false,
   //we want to get those source-maps, which help us match minified code to development code
-  devtool: 'eval-cheap-module-source-map',
+  // devtool: 'eval-cheap-module-source-map',
   //dev middleware option
   noInfo: false,
   //entry point to build our bundle from (top level app/component)
