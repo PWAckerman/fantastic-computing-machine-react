@@ -1,0 +1,95 @@
+@import '../../../sass/base';
+
+.playlist-container{
+    @include modifier('closed'){
+        width: 80px;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        transition: .1s;
+        text-align: left;
+    }
+    @include modifier('open'){
+        width: 350px;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        transition: .1s;
+        text-align: left;
+    }
+}
+
+.playlist-header{
+    width: 100%;
+    word-wrap: normal;
+    white-space: normal;
+    height: auto;
+    background-color: rgb(64, 64, 64);
+    font-weight: 200;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    border-bottom: 1px solid rgb(171, 171, 171);
+    text-align: left;
+}
+
+.playlist{
+    @include modifier('closed'){
+        width: 0%;
+        overflow: hidden;
+        background-color: rgb(52, 52, 52);
+        display: inline-block;
+        height: 100%;
+        position: absolute;
+        transition: .1s;
+        left: 0px;
+    }
+    @include modifier('open'){
+        width: 300px;
+        overflow: hidden;
+        display: inline-block;
+        background-color: rgb(52, 52, 52);
+        height: 100%;
+        transition: .1s;
+        left: 0px;
+        vertical-align: top;
+        z-index: 100;
+    }
+}
+
+.menu-container{
+    width: 300px;
+    overflow: hidden;
+    display: inline-block;
+    background-color: rgb(52, 52, 52);
+    height: 100%;
+    transition: .5s;
+    left: 0px;
+    overflow-y: scroll;
+    vertical-align: top;
+    transition: .1s;
+    z-index: 50;
+}
+
+.custom-burger-menu{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    // top: 10px;
+    // right: 10px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    display: inline-block;
+    transition: .1s;
+    z-index: 0;
+    @include element('icon'){
+        cursor: pointer;
+        width: 30px;
+        height: auto;
+    }
+}

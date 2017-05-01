@@ -1,13 +1,16 @@
 @import '../../sass/base';
 
 .entry-list-item{
-    width: 100%;
+    width: 95%;
     display: inline-block;
     min-height: 100px;
     height: auto;
     margin-bottom: 10px;
     margin-top: 10px;
+    background-color: rgb(245, 245, 250);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 10px 10px 6px -8px rgba(24, 24, 24, 0.31);
+    color: black;
 }
 
 @media #{$smartphone}{
@@ -20,7 +23,9 @@
             width: 40px;
             height: 40px;
             border-radius: 40px;
+            margin-top: 10px;
             vertical-align: top;
+            margin-right: 20px;
             margin-left: 15px;
             display: inline-block;
         }
@@ -37,10 +42,11 @@
             width: 60px;
             height: 60px;
             border-radius: 40px;
-            vertical-align: top;
+            margin-top: 10px;
             margin-left: 15px;
             display: inline-block;
-
+            vertical-align: top;
+            margin-right: 20px;
         }
     }
 }
@@ -56,10 +62,11 @@
             width: 60px;
             height: 60px;
             border-radius: 40px;
-            vertical-align: top;
+            margin-top: 10px;
             margin-left: 15px;
             display: inline-block;
-
+            vertical-align: top;
+            margin-right: 20px;
         }
     }
 }
@@ -76,11 +83,12 @@
 
     @include element('text'){
         font-weight: 200;
+        margin-bottom: 5px;
     }
 }
 
 .more{
-    color: rgba(255, 255, 255, 0.5);
+    color: black;
     cursor: pointer;
     margin-bottom: 20px;
 }

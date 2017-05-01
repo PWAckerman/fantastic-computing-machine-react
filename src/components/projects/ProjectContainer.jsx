@@ -7,11 +7,11 @@ import {srcSelector} from '../../selectors/srcSelector';
 const ProjectContainer = ({project})=>{
     return (
         <div className="project">
+        <div className="project__title" ><span className="project__title__text">{project.title}</span><PlatformList platformList={project.platforms}/></div>
             <div className="screenshot-block">
                 <img className="screenshot-block__screenshot" alt="src" src={srcSelector(project.screenshot)}/>
             </div>
             <div className="description-block">
-                <div className="description-block__title" >{project.title}<PlatformList platformList={project.platforms}/></div>
                 <div className="description-block__description" >{project.description}</div>
             </div>
             <div className="tech-spacer"></div>

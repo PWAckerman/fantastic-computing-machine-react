@@ -4,30 +4,30 @@
     position: fixed;
     right: -200px;
     height: 100vh;
-    background-color: rgb(0, 76, 139);
+    background-color: white;
     width: 200px;
     transition: .5s;
     top: 60px;
     display: inline-block;
     text-align: left;
-    z-index: 25;
+    z-index: 51;
 }
 
 .side-menu-OUT{
     position: fixed;
     right: 0px;
     height: 100vh;
-    background-color: rgb(0, 76, 139);
+    background-color: white;
     width: 200px;
     transition: .5s;
     top: 60px;
     display: inline-block;
     text-align: left;
-    z-index: 25;
+    z-index: 51;
 }
 
 .list-item{
-    color: white;
+    color: black;
     width: 100%;
     text-align: left;
     padding-left: 10px;
@@ -37,19 +37,36 @@
     display: inline-block;
     height: 40px;
     transition: .2s;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.55);
+    position: relative;
+    &::before{
+         border-radius: inherit;
+         @include bg-gradient();
+         content: '';
+         display: block;
+         height: 100%;
+         position: absolute;
+         top: 0; left: 0;
+         opacity: 0;
+         width: 100%;
+         z-index: -100;
+         transition: opacity 0.45s;
+    }
     &:hover{
-        background-color: rgba(0, 0, 0, 0.47);
-        transition: .2s;
+        color: rgba(49, 172, 187, 0.6) !important;
+        border-bottom: 1px solid white;
+        &::before {
+          opacity: 1;
+        }
         & .menu-icon{
-            color: rgb(213, 218, 176);
+            color: rgba(49, 172, 187, 0.6);
             transition: .2s;
         }
     }
 }
 
 .list-item .nav-link{
-    color: white;
+    color: black;
     font-size: 15px;
     margin-left: 10px;
     margin-right: 10px;

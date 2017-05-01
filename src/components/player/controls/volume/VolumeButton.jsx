@@ -7,7 +7,7 @@ const VolumeButton = ({mute, open, updateVolume, value, muteCallback, unmuteCall
     console.log('OPEN', open);
     return (
         <div className="volume-button" onMouseEnter={show} onMouseLeave={hide}>
-            <button className="volume-button__button">
+            <button name="volume-button" className="volume-button__button">
                 { mute && <i className="icon-music-mute" onClick={unmuteCallback}></i> || <i className={value < 50 ? "icon-music-volume-down" : "icon-music-volume-up"} onClick={muteCallback}></i>}
             </button>
             { open && <VolumeController cb={updateVolume} value={mute ? 0 : value}/> || ''}

@@ -7,6 +7,7 @@ import './EntryList.scss';
 const EntryList = ({ entryList, avatar, callback, range })=>{
     return (
         <div className="entry-list">
+        <h1 className="entry-list__header"><span className="entry-list__header__text">MicroBlog</span></h1>
             <ul>
                 {entryList.map((entry) => <Entry key={entry._id} avatar={avatar} entry={tagParser(entry)} />)}
             </ul>

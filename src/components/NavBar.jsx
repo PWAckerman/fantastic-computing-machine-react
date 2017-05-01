@@ -23,7 +23,7 @@ export class NavBar extends Component {
          return <nav className="nav">
                     <div className="navbar-header">
                         <div className="nav-brand" ><Link to="/home"><img className="nav-brand__img" src='./assets/images/pwalogo.svg'/></Link></div>
-                        <div className="burger-menu" onClick={this.onClick}><img className="burger-menu__icon" src="./assets/images/burger-menu.svg"/></div>
+                        <div className="burger-menu" onClick={this.onClick}><img className="burger-menu__icon" src="./assets/images/black-burger-menu.svg"/></div>
                         <div className="navbar-header__left">
                             <PageLink linkPath="/projects" linkName="Projects"/>
                             <PageLink linkPath="/education" linkName="Education"/>

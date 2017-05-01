@@ -52,14 +52,20 @@ module.exports = {
       { test: /\.jsx?$/, include: path.join(__dirname, 'src'),
         loader: 'babel',
         query: {
-            "presets": ['react','es2015'],   
+            "presets": ['react','es2015'],
             "plugins": ["transform-object-rest-spread", "transform-decorators-legacy"] }
       },
       { test: /\.scss$/,
-        loaders: ["style-loader", "css-loader", "sass-loader"]
+        loaders: ["style-loader", "css-loader", "postcss-loader", "sass-loader"]
       }
     ]
   },
+  postcss: () => {
+      return [
+        require('postcss-smart-import'),
+        require('autoprefixer')
+      ];
+    },
   sassLoader: {
      includePaths: [path.resolve(__dirname, "./src")]
   }

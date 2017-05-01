@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import LoadingComponent from '../shared/LoadingComponent';
 import ProjectContainer from './ProjectContainer';
 import HeaderSpacer from '../shared/HeaderSpacer';
 
+
 export class Projects extends Component {
      render(){
-         return <div className="container">
+         if(!this.props.projects){
+             return <LoadingComponent />
+         } else {
+             return <div className="container">
 
-            <HeaderSpacer />
-            <h1>Projects</h1>
-            {this.props.projects.reverse().map((project)=>{ return <ProjectContainer key={project._id} project={project} />})}
-         </div>
+                <HeaderSpacer />
+                <div className="projects-container">
+                <h1 className="projects__header"><span className="projects__header__text">Projects</span></h1>
+                {this.props.projects.reverse().map((project)=>{ return <ProjectContainer key={project._id} project={project} />})}
+                </div>
+             </div>
+         }
      }
 }
 
@@ -20,7 +28,7 @@ Projects.propTypes = {
 
 function mapStateToProps(state){
     return {
-        projects: state.user.user.projects,
+        projects: state.user ? state.user.user ? state.user.user.projects : '' : '',
     }
 }
 

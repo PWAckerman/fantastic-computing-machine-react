@@ -7,9 +7,7 @@ import './Entry.scss';
 const Entry = ({entry, avatar})=>{
     return (
         <li className="entry-list-item">
-            <div className="avatar-block">
-                <img className="avatar-block__avatar" src={avatar} alt="profile-picture" />
-            </div>
+            <img className="avatar-block__avatar" src={avatar} alt="profile-picture" />
             <div className="text-block">
                 <div className="text-block__date">{formatDate(entry.date)}</div>
                 <div className="text-block__text">{entry.text}</div>

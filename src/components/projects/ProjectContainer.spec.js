@@ -21,7 +21,7 @@ describe('<ProjectContainer />', () => {
   });
   it('should render', () => {
       expect(Component.length).to.equal(1);
-      expect(Component.find('.description-block__title').text()).to.equal('Test Project<PlatformList />');
+      expect(Component.find('.project__title__text').text()).to.equal('Test Project');
       expect(Component.find('.description-block__description').text()).to.equal('A project');
   });
   it('should tranform the source path of the screenshot', ()=>{

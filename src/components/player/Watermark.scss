@@ -1,0 +1,14 @@
+@import '../../sass/base';
+
+.watermark{
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    @include element('image'){
+        width: 100%;
+        height: auto;
+    }
+}

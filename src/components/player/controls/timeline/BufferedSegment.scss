@@ -1,0 +1,9 @@
+@import '../../../../sass/base';
+
+.buffered-segment{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.38);
+    height: 100%;
+    top: 0px;
+    transition: .5s;
+}

@@ -9,6 +9,7 @@
     text-align: center;
     display: inline-block;
     float: right;
+    z-index: 50;
     @include element('button'){
         color: #fff;
         font-size: 30px;

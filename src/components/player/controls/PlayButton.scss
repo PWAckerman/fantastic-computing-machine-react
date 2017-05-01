@@ -9,13 +9,13 @@
     text-align: center;
     display: inline-block;
     float: left;
+    line-height: 50px;
     @include element('button'){
         color: #fff;
         font-size: 30px;
         width: 100%;
         text-align: center;
         line-height: 50px;
-        padding: 0px;
         cursor: pointer;
         &:hover{
             color: $bottomDarkBlue;

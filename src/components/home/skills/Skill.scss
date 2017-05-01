@@ -1,7 +1,7 @@
 @import '../../../sass/base';
 
 .skill{
-    background-color: rgba(24, 24, 24, 0.61);
+    background-color: rgba(24, 24, 24, 0);
     width: 80px;
     height: 70px;
     padding: 5px;
@@ -10,7 +10,7 @@
     transition: .5s;
     vertical-align: top;
     &:hover{
-        background-color: rgba(112, 112, 112, 0.61);
+        background-color: $topDarkBlue;
         transition: .5s;
     }
     @include element('icon'){

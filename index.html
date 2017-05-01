@@ -3,14 +3,39 @@
     <head>
         <meta charset="utf-8">
         <title>patrickackerman.io</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Patrick Ackerman's Portfolio Sandbox"/>
+        <!-- Responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <!-- Facebook -->
+        <meta property="og:title" content="Patrick Ackerman's Portfolio Sandbox"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="http://45.56.104.237:8080/assets/images/thumbnail.jpg"/>
+        <meta property="og:url" content="http://www.patrickackerman.io"/>
+        <meta property="og:description" content="Patrick Ackerman's Portfolio Sandbox"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="http://www.patrickackerman.io">
+        <meta name="twitter:description" content="Patrick Ackerman's Portfolio Sandbox">
+        <meta name="twitter:image" content="http://45.56.104.237:8080/assets/images/thumbnail.jpg">
+        <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-        <link href="./assets/fonts/linea_complete_1.0/_basic/_ICONFONT/styles.css" rel='stylesheet' type='text/css'>
-        <link href="./assets/fonts/linea_complete_1.0/_music/_ICONFONT/styles.css" rel='stylesheet' type='text/css'>
-        <link href="./assets/fonts/linea_complete_1.0/_software/_ICONFONT/styles.css" rel='stylesheet' type='text/css'>
+        <!-- Icon Fonts -->
+        <link rel="prefetch" href="./assets/fonts/linea_complete_1.0/_basic/_ICONFONT/styles.css" rel='stylesheet' type='text/css'>
+        <link rel="prefetch" href="./assets/fonts/linea_complete_1.0/_music/_ICONFONT/styles.css" rel='stylesheet' type='text/css'>
+        <link rel="prefetch" href="./assets/fonts/linea_complete_1.0/_software/_ICONFONT/styles.css" rel='stylesheet' type='text/css'>
+        <!-- Performance Enhancers -->
+        <link rel="prerender" href="http://www.patrickackerman.io/microblog">
+        <link rel="prerender" href="http://www.patrickackerman.io/home">
+        <link rel="prerender" href="http://www.patrickackerman.io/education">
+        <link rel="prerender" href="http://www.patrickackerman.io/projects">
+        <link rel="prerender" href="https://medium.com/@patrickackerman">
     </head>
     <body>
+        <!-- Background Animation -->
+        <div class="body-extender"></div>
+        <!-- React Append Point -->
         <div id="root"></div>
+        <!-- This script tag can really go in the head now because of modern browsers, but you have to put it here or else people think you don't know what you're doing -->
         <script src='./prodbundle.js'></script>
     </body>
 </html>

@@ -5,8 +5,18 @@
     height: auto;
     position: relative;
     display: inline-block;
+    object-fit: cover;
+    background-color: black;
+    @include modifier('fullscreen'){
+        width: 100vw;
+        height: auto;
+        position: relative;
+        display: inline-block;
+    }
     @include element('video'){
         width: 100%;
         height: auto;
+        object-fit: cover;
+        background-color: black;
     }
 }

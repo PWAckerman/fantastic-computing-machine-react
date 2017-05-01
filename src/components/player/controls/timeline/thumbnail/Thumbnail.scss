@@ -1,0 +1,24 @@
+@import '../../../../../sass/base';
+
+.thumbnail{
+    width: 100px;
+    height: auto;
+    min-height: 30px;
+    background-color: rgb(61, 61, 61);
+    color: white;
+    position: absolute;
+    top: -68px;
+    text-align: center;
+    @include element('image'){
+        width: 100%;
+        height: auto;
+        max-height: 58px;
+        display: inline-block;
+    }
+    @include element('timestamp'){
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 2px;
+    }
+}

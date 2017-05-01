@@ -1,0 +1,11 @@
+// @import '../../../../sass/base';
+
+.scrubbar{
+    background-color: rgb(73, 112, 201);
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    transition: .5s;
+    position: absolute;
+    left: 0px;
+}

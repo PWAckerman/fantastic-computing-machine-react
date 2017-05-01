@@ -7,14 +7,15 @@ import TimeBar from './TimeBar';
 
 describe('<TimeBar />', () => {
   let percent = .5;
+  let segments = [];
 
   let Component;
   beforeEach(()=>{
       Component = shallow(
-              <TimeBar percent={percent}/>
+              <TimeBar segments={segments} percent={percent}/>
           )
   });
-  
+
   it('should render', () => {
       expect(Component.length).to.equal(1);
   });

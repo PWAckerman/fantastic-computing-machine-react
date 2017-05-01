@@ -1,7 +1,7 @@
 @import '../../../sass/base';
 
 .learning{
-    background-color: rgba(24, 24, 24, 0.61);
+    background-color: rgba(255, 255, 255, 0.61);
     width: 80px;
     height: 80px;
     padding: 5px;
@@ -9,7 +9,7 @@
     text-align: center;
     transition: .5s;
     &:hover{
-        background-color: rgba(112, 112, 112, 0.61);
+        background-color: $topDarkBlue;
         transition: .5s;
     }
     @include element('icon'){

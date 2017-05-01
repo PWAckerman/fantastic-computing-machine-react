@@ -4,7 +4,7 @@
     width: 50px;
     height: 50px;
     padding: 5px;
-    background-color: rgba(175, 175, 175, 0.27);
+    background-color: white;
     transition: .5s;
     display: inline-block;
     text-align: center;
@@ -17,7 +17,7 @@
     }
 
     &:hover{
-        background-color: rgba(175, 175, 175, 0.44);
+        background-color: $topDarkBlue;
         transition: .5s;
     }
 }

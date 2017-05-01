@@ -1,14 +1,58 @@
 @import '../../sass/base';
 
 .project{
-    width: 100%;
+    width: 96%;
     height: auto;
     min-height: 300px;
-    background-color: rgba(254, 254, 254, 0.18);
+    background-color: rgb(251, 251, 251);
+    display: inline-block;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-radius: 10px;
     position: relative;
+    box-shadow: 10px 10px 6px -8px rgba(24, 24, 24, 0.31);
+    @include element('title'){
+        color: black;
+        font-size: 30px;
+        font-weight: 200;
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid black;
+        padding-top: 5px;
+        padding-bottom: 3px;
+
+        @include element('text'){
+            margin-left: 10px;
+        }
+    }
+}
+
+.projects{
+    @include element('header'){
+        background-color: white;
+        color: black;
+        font-size: 35px;
+        width: 100%;
+        border-bottom: black 1px solid;
+        font-weight: 200;
+        margin-bottom: 0px;
+        padding-bottom: 5px;
+        text-align: left;
+        margin-top: 5px;
+        @include element('text'){
+            margin-left: 10px;
+        }
+    }
+}
+
+.projects-container{
+    width: 95%;
+    height: auto;
+    background-color: white;
+    box-shadow: 10px 10px 6px -8px rgba(24, 24, 24, 0.31);
+    margin-bottom: 10px;
+    display: inline-block;
 }
 
 .description-block{
@@ -20,6 +64,7 @@
     padding-left: 20px;
     font-weight: 300;
     overflow-y: scroll;
+    color: black;
     @include element('title'){
         font-size: 30px;
         font-weight: 500;
@@ -31,6 +76,7 @@
     @include element('description'){
         font-size: 15px;
         font-weight: 300;
+        margin-top: 10px;
         display: inline-block;
         text-align: left;
     }

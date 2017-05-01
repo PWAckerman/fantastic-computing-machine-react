@@ -4,6 +4,7 @@
     display: inline-block;
     transition: .5s;
     opacity: 1;
+    z-index: 51;
 }
 
 .SKILL_INVISIBLE{
@@ -19,30 +20,34 @@
         top: 60px;
         left: 0px;
         height: 60px;
-        background-color: rgba(117, 117, 117, 0.56);
         text-align: center;
+        background-color: white;
+        -moz-box-shadow: 10px 10px 6px -8px rgba(24, 24, 24, 0.31);
+        -webkit-box-shadow: 10px 10px 6px -8px rgba(24, 24, 24, 0.31);
+        box-shadow: 10px 10px 6px -8px rgba(24, 24, 24, 0.31);
         @include element('icon'){
             position: absolute;
             top: 5px;
             left: 5px;
             width: 40px;
             height: auto;
+            max-height: 50px;
             float: left;
         }
         @include element('name'){
             display: inline-block;
             line-height: 25px;
             font-size: 20px;
-            font-weight: 500;
-            color: white;
+            font-weight: 300;
+            color: rgb(0, 0, 0);
             width: 100%;
         }
         @include element('type'){
             display: inline-block;
             font-size: 15px;
             line-height: 20px;
-            font-weight: 300;
-            color: white;
+            font-weight: 200;
+            color: rgb(0, 0, 0);
             width: 100%;
         }
     }
@@ -63,7 +68,10 @@
         left: 20px;
         width: 200px;
         min-height: 200px;
-        background-color: rgba(117, 117, 117, 0.56);
+        background-color: white;
+        -moz-box-shadow: 10px 10px 6px -8px rgba(24, 24, 24, 0.31);
+        -webkit-box-shadow: 10px 10px 6px -8px rgba(24, 24, 24, 0.31);
+        box-shadow: 10px 10px 6px -8px rgba(24, 24, 24, 0.31);
         display: inline-block;
         text-align: center;
         padding: 10px;
@@ -74,16 +82,16 @@
         }
         @include element('name'){
             font-size: 20px;
-            font-weight: 500;
+            font-weight: 300;
             width: 100%;
-            color: white;
+            color: black;
             display: inline-block;
         }
         @include element('type'){
             font-size: 18px;
-            font-weight: 300;
+            font-weight: 200;
             width: 100%;
-            color: white;
+            color: black;
             display: inline-block;
         }
 

@@ -1,7 +1,8 @@
 @import '../../sass/base';
 
 .tag{
-     background-color: rgb(126, 40, 40);
+     @include bg-gradient();
+     color: rgba(49, 172, 187, 0.6);
      padding-top: 2px;
      padding-bottom: 2px;
      padding-left: 5px;

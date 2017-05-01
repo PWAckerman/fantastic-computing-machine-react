@@ -12,7 +12,7 @@ const TimeCode = ({current, duration}) => {
 
     return (
         <div className="timecode">
-            {toTimeCode(current)}/<br></br>{toTimeCode(duration)}
+            <span>{toTimeCode(current)}/</span><span className="timecode__duration">{toTimeCode(duration)}</span>
         </div>
     )
 }

@@ -1,16 +1,30 @@
 import React from 'react';
 
-const HeroVideo = ({videoSrc, blurb, name}) => {
-    console.log(blurb, name);
+const HeroVideo = ({videoSrc, blurb, name, coords, endCallback, startCallback, blurbCallback}) => {
+    let ctrans = 'translate(' + coords.x + 'px, ' + coords.y + 'px)';
+    let translate = {
+        transform: ctrans,
+        transition: '.1s'
+    }
     return (
         <div className="hero">
-        <div className="hero__blurb">
+        <div className="hero__blurb-container">
+        <div className="hero__blurb"
+            style={translate}
+            draggable={false}
+            onMouseUp={endCallback}
+            onTouchStart={startCallback}
+            onTouchMove={blurbCallback}
+            onTouchEnd={endCallback}
+            onMouseLeave={endCallback}
+            onMouseDown={startCallback} 
+            onMouseMove={blurbCallback}>
             <div className="hero__blurb__quote">"{blurb}"</div>
             <div className="hero__blurb__name"> - {name}</div>
         </div>
+        </div>
         <video className="hero__video" loop="loop" autoPlay="autoplay">
-            <source src={`${videoSrc}.mp4`} type="video/mp4"/>
-            <source src={`${videoSrc}.webm`} type="video/webm"/>
+
         </video>
         </div>
     )

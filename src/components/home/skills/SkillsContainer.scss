@@ -1,5 +1,21 @@
 @import '../../../sass/base';
 
-.skills-list{
-    
+.skills-list-container{
+    background-color: white;
+    box-shadow: 10px 10px 6px -8px rgba(24, 24, 24, 0.31);
+    margin-bottom: 20px;
+}
+
+.skills-list-header{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    border-bottom: 1px solid black;
+    color: black;
+    font-weight: 200;
+    width: 100%;
+}
+
+.skills-list-header__span{
+    margin-left: 10px;
 }

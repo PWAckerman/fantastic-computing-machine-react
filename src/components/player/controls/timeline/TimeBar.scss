@@ -10,24 +10,45 @@
     height: 4px;
     text-align: left;
     cursor: pointer;
+    transition: .5s;
+    overflow-x: hidden;
+    overflow-y: hidden;
     &:hover{
+        top: -8px;
         height: 8px;
+        transition: .5s;
+
+    }
+    &:hover > .timebar__cursor{
+        cursor: pointer;
+        vertical-align: top;
+        position: relative;
+        left: -7px;
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        background-color: white;
+        transition: .5s;
+        z-index: 50;
     }
     @include element('inner-bar'){
         background-color: $bottomDarkBlue;
         height: 100%;
         display: inline-block;
         vertical-align: top;
+        transition: 1s;
+        transition-timing-function: ease-in-out;
     }
     @include element('cursor'){
         cursor: pointer;
         vertical-align: top;
         position: relative;
-        top: 0px;
-        width: 10px;
-        height: 10px;
-        border-radius: 5px;
+        left: -5px;
+        width: 4px;
+        height: 4px;
         display: inline-block;
         background-color: white;
+        transition: .5s;
+        z-index: 50;
     }
 }

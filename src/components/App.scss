@@ -7,9 +7,40 @@ body{
     font-family: $font-stack;
     margin: 0px;
     color: white;
+
     &::selection{
         background-color: rgb(205, 217, 130);
         color: $bottomDarkBlue;
+    }
+}
+
+.body-extender{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    &::before{
+         border-radius: inherit;
+         content: '';
+         background: url('http://45.56.104.237:8080/assets/images/repeat-cube.png');
+         background-repeat: repeat;
+         background-size: 200px;
+         display: block;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 0;
+         opacity: .03;
+         width: 100%;
+         z-index: -100;
+         transform-origin: -50%, -50%;
+         animation: sheen 30s alternate;
+         animation-iteration-count:infinite;
+         animation-timing-function: linear;
     }
 }
 

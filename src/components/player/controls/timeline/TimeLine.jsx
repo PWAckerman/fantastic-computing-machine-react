@@ -1,12 +1,15 @@
 import React from 'react';
 import TimeCode from './TimeCode';
 import TimeBar from './TimeBar';
+import Thumbnail from './thumbnail/Thumbnail';
 import './TimeLine.scss';
 
-const TimeLine = ({current, duration, callback}) => {
+const TimeLine = ({segments, thumb, current, duration, callback, scrubPercent, scrubCb}) => {
+    console.log('Timeline', scrubPercent);
     return (
         <div className="timeline">
-            <TimeBar callback={callback} percent={Math.ceil((current/duration) * 100)}/>
+            <TimeBar segments={segments} callback={callback} scrubPercent={ scrubPercent } percent={Math.ceil((current/duration) * 100)} scrubCb={scrubCb}/>
+            { scrubPercent && <Thumbnail thumb={thumb} scrubPercent={ scrubPercent } timestamp={scrubPercent * duration}/> || ''}
             <TimeCode current={current} duration={duration}/>
         </div>
     )

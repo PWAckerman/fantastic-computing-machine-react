@@ -5,13 +5,15 @@ import PlayButton from './PlayButton';
 import PauseButton from './PauseButton';
 import TimeLine from './timeline/TimeLine';
 import VolumeButton from './volume/VolumeButton';
+import BackButton from './BackButton';
+import ForwardButton from './ForwardButton';
+import SettingsButton from './settings/SettingsButton';
 import './ControlsContainer.scss';
 
-export const ControlsContainer = ({mute, volume, updateVolume, hideCb, showCb, open, muteCb, unmuteCb, shrink, updatePosition, fullScreen, requestFullScreen, mouseOverCb, mouseLeaveCb, controls, current, duration, play, playing, pause}) => {
+export const ControlsContainer = ({playbackSpeed, setPlayback, forward, back, segments, thumb, scrubPercent, scrubCb, mute, volume, updateVolume, hideCb, showCb, open, muteCb, unmuteCb, shrink, updatePosition, fullScreen, requestFullScreen, mouseOverCb, mouseLeaveCb, controls, current, duration, play, playing, pause}) => {
+    console.log('ControlsContainer', scrubPercent);
     return (
         <div
-            onMouseOver={mouseOverCb}
-            onMouseLeave={mouseLeaveCb}
             className={controls ? "controls-container" : "controls-container--hide"}>
                 {playing && <PauseButton pause={pause}/> || <PlayButton play={play}/>}
             <FullScreenButton
@@ -27,7 +29,20 @@ export const ControlsContainer = ({mute, volume, updateVolume, hideCb, showCb, o
                 unmuteCallback={unmuteCb}
                 hide={hideCb}
                 show={showCb}/>
-            <TimeLine callback={updatePosition} current={current} duration={duration}/>
+            <ForwardButton forward={forward} />
+            <BackButton back={back} />
+            <SettingsButton
+                playbackSpeed={playbackSpeed} 
+                setPlaybackSpeed={setPlayback}/>
+            <TimeLine
+                segments={segments}
+                thumb={thumb}
+                scrubPercent={scrubPercent}
+                callback={updatePosition}
+                current={current}
+                duration={duration}
+                scrubCb={scrubCb}
+              />
         </div>
     )
 }

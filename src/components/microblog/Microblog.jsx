@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import EntryList from './EntryList';
 import HeaderSpacer from '../shared/HeaderSpacer';
+import LoadingComponent from '../shared/LoadingComponent';
 import { connect } from 'react-redux';
 import { loadEntries } from '../../actions/entryActions';
 import { increaseRange } from '../../actions/rangeActions';
@@ -50,11 +51,14 @@ export class MicroBlog extends Component {
     }
 
     render(){
-         return <div>
-            <HeaderSpacer />
-            <h1>MicroBlog</h1>
-            <EntryList range={this.props.range} callback={ this.increaseRange } entryList={rangeSelector(this.props.entries.sort((a,b)=> new Date(b.date) - new Date(a.date)), this.props.range)} avatar={this.props.user.avatar}/>
-         </div>
+        if(!this.props.user){
+            return <LoadingComponent />
+        } else {
+            return <div className="container">
+               <HeaderSpacer />
+               <EntryList range={this.props.range} callback={ this.increaseRange } entryList={rangeSelector(this.props.entries.sort((a,b)=> new Date(b.date) - new Date(a.date)), this.props.range)} avatar={this.props.user.avatar}/>
+            </div>
+        }
     }
 }
 
