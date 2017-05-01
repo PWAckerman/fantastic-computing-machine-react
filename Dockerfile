@@ -8,9 +8,10 @@ RUN apt-get update &&\
 
 RUN apt-get install --only-upgrade libssl1.0.0 openssl
 
+WORKDIR ./app
+
 COPY ./ ./
 
-WORKDIR ./
 RUN npm install yarn
 RUN yarn install
 RUN ls
