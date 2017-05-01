@@ -14,6 +14,6 @@ COPY ./ ./
 
 RUN npm install yarn
 RUN yarn install
-RUN ls
+RUN ls ./dist
 
 ENTRYPOINT ["bash", "-x", "./startup.sh"]
