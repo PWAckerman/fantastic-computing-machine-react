@@ -33,6 +33,6 @@ app.get('/projects',(req,res)=>{
     res.send(fs.readFileSync('../dist/index.html','utf8'))
 })
 
-app.listen(80, ()=>{
+app.listen(5000, ()=>{
     console.log('listening');
 })
