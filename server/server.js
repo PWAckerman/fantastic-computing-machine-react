@@ -5,7 +5,7 @@ const app = express();
 app.use(express.static('../dist'));
 
 //quick and dirty react server-side routing
-app.get('/', (res, res)=>{
+app.get('/', (req, res)=>{
     console.log(res);
     res.send(fs.readFileSync('../dist/index.html','utf8'));
 })
