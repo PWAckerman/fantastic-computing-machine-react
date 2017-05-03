@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const PageLink = ({ callback, linkName, linkPath })=>{
+const PageLink = ({parentRef, callback, linkName, linkPath })=>{
+
+    function callbackWrapper(){
+        callback(linkName);
+    }
+
     return (
-        <button onClick={callback ? callback : ''} className={["nav-link"].join('')}>
+        <button ref={parentRef} onClick={callback ? callbackWrapper : ''} className={["nav-link"].join('')}>
             <Link to={linkPath}>{linkName}</Link>
         </button>)
 }
