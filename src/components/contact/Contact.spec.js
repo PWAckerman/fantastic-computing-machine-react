@@ -9,8 +9,11 @@ import { Contact } from './Contact';
 describe('<Contact />', () => {
   it('calls componentDidMount', () => {
     const renderSpy = spy(Contact.prototype, 'render');
+    const path = {
+        pathname: 'email'
+    }
     const wrapper = mount(
-        <Contact/>
+        <Contact location={path}/>
     );
     expect(Contact.prototype.render.calledOnce).to.equal(true);
     renderSpy.restore();
