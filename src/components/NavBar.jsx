@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PageLink from './PageLink';
+import NavBarHighlighter from './NavBarHighlighter';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { setMenuState } from '../actions/menuActions';
@@ -42,6 +43,7 @@ export class NavBar extends Component {
      render(){
          return <nav className="nav">
                     <div className="navbar-header">
+                    <NavBarHighlighter clientRect={this.state.highlight} />
                         <div className="nav-brand" ><Link to="/home"><img className="nav-brand__img" src='./assets/images/pwalogo.svg'/></Link></div>
                         <div className="burger-menu" tabIndex="1" onClick={this.onClick}><img className="burger-menu__icon" src="./assets/images/black-burger-menu.svg"/></div>
                         <div className="navbar-header__left">

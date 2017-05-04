@@ -80,6 +80,7 @@ a, a:visited{
         font-weight: 200;
         text-transform: uppercase;
         display: inline-block;
+        position: relative;
         @include element('left'){
             display: none;
             float: right;
@@ -96,6 +97,7 @@ a, a:visited{
         font-weight: 200;
         text-transform: uppercase;
         display: inline-block;
+        position: relative;
         @include element('left'){
             display: none;
             float: right;
@@ -112,6 +114,7 @@ a, a:visited{
         font-weight: 200;
         text-transform: uppercase;
         display: inline-block;
+        position: relative;
         @include element('left'){
             display: inline-block;
             float: right;

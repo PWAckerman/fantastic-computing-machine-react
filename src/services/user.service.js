@@ -34,6 +34,35 @@ class UserService {
         }
         return dfd.promise;
     }
+
+    sendEmail(mailForm){
+        let dfd = q.defer();
+        this.axios({
+            method: 'POST',
+            url: `${constants.base}/sendmail/${this.user._id}`,
+            cache: true,
+            data: mailForm
+        }).then((res)=>{
+            dfd.resolve(res.data);
+        }).catch((err)=>{
+            dfd.reject(err);
+        })
+        return dfd.promise;
+    }
+
+    sendText(textForm){
+        let dfd = q.defer();
+        this.axios({
+            method: 'POST',
+            url: `${constants.base}/sendtext/${this.user._id}`,
+            data: textForm
+        }).then((res)=>{
+            dfd.resolve(res.data);
+        }).catch((err)=>{
+            dfd.reject(err);
+        })
+        return dfd.promise;
+    }
 }
 
-export default UserService
+export default UserService;

@@ -1,14 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 
-const PageLink = ({parentRef, callback, linkName, linkPath })=>{
+const PageLink = ({parentRef, callback, linkName, linkPath, history})=>{
 
     function callbackWrapper(){
+        browserHistory.push(linkPath);
         callback(linkName);
     }
 
     return (
-        <button ref={parentRef} onClick={callback ? callbackWrapper : ''} className={["nav-link"].join('')}>
+        <button ref={parentRef} id={linkName} onClick={callback ? callbackWrapper : () => browserHistory.push(linkPath) } className={["nav-link"].join('')}>
             <Link to={linkPath}>{linkName}</Link>
         </button>)
 }
