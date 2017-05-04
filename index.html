@@ -37,5 +37,21 @@
         <div id="root"></div>
         <!-- This script tag can really go in the head now because of modern browsers, but you have to put it here or else people think you don't know what you're doing -->
         <script src='./prodbundle.js'></script>
+        <script>
+            //focus on keyboard navigation, not on clicks
+            var body = document.querySelector('body');
+            body.addEventListener('click', function(){
+                body.className = "";
+                console.log('click');
+            });
+            body.addEventListener('keydown', function(evt){
+                console.log(evt.which);
+                if(evt.which === 9){
+                    body.className = "keyboard-navigation";
+                } else if(evt.which === 9 && event.shiftKey){
+                    body.className = "keyboard-navigation";
+                }
+            });
+        </script>
     </body>
 </html>
