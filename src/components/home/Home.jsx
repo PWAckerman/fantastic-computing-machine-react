@@ -6,7 +6,8 @@ import SkillsContainer from './skills/SkillsContainer';
 import LearningContainer from './skills/LearningContainer';
 import CurrentSkill from './skills/CurrentSkill';
 import LoadingComponent from '../shared/LoadingComponent';
-import CustomVideoPlayerComponent from '../player/CustomVideoPlayer';
+import CustomVideoPlayer from '../player/CustomVideoPlayer';
+import VideoModal from '../videomodal/VideoModal';
 import './Hero.scss';
 
 export class Home extends Component {
@@ -65,6 +66,7 @@ export class Home extends Component {
     render(){
          if(this.props.user){
              return <div>
+
                     <HeroVideo
                         blurb={this.props.blurbs[0].blurb}
                         blurbCallback={this.dragDelta}
@@ -74,6 +76,7 @@ export class Home extends Component {
                         coords={this.state.delta}
                         videoSrc="./assets/videos/Hello-World/Hello-World"/>
                     <div className="container">
+                    <VideoModal open={this.props.modal}/>
                     <SkillsContainer
                         select={this.props.dispatch}
                         skills={this.props.user.skills}
@@ -103,7 +106,8 @@ function mapStateToProps(state){
         user: state.user.user,
         skill: state.skill.skill,
         visibilityFilter: state.skill.visibilityFilter,
-        blurbs: state.blurbs.blurbs
+        blurbs: state.blurbs.blurbs,
+        modal: state.modal.modalState
     }
 }
 

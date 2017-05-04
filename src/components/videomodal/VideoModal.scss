@@ -1,0 +1,35 @@
+@import '../../sass/base';
+
+.video-modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.54);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 150;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include element('container'){
+        width: 100%;
+        height: auto;
+        background-color: black;
+        vertical-align: middle;
+    }
+    @include element('close-button'){
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        font-size: 30px;
+        padding-top: 15px;
+        padding-left: 15px;
+        display: inline-block;
+        text-align: center;
+        z-index: 151;
+        cursor: pointer;
+    }
+}

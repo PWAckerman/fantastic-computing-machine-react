@@ -7,3 +7,5 @@ export const GET_BLURB_SUCCESS = 'GET_BLURB_SUCCESS';
 export const SET_MENU_STATE = 'SET_MENU_STATE';
 export const INCREASE_RANGE = 'INCREASE_RANGE';
 export const CLOSE_MENU = 'CLOSE_MENU';
+export const CLOSE_MODAL = 'CLOSE_MODAL';
+export const OPEN_MODAL = 'OPEN_MODAL';

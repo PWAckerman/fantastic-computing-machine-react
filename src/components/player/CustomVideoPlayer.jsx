@@ -5,7 +5,7 @@ import Playlist from './playlist/Playlist';
 import VideoLoading from './VideoLoading';
 import './CustomVideoPlayer.scss';
 
-export class CustomVideoPlayerComponent extends Component {
+export class CustomVideoPlayer extends Component {
     constructor(props, context){
         super(props, context);
         this.state = {
@@ -466,4 +466,4 @@ export class CustomVideoPlayerComponent extends Component {
     }
 }
 
-export default CustomVideoPlayerComponent;
+export default CustomVideoPlayer;

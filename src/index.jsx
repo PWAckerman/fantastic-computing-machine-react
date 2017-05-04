@@ -16,6 +16,7 @@ import UserService from './services/user.service';
 import { loadUser } from './actions/userActions.js';
 import { loadEntries } from './actions/entryActions.js';
 import { loadBlurbs } from './actions/blurbActions.js';
+import { closeModal } from './actions/modalActions.js';
 
 const userService = new UserService();
 userService.getUser().then((data)=>{
