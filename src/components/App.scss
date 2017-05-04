@@ -14,6 +14,11 @@ body{
     }
 }
 
+body:not(.keyboard-navigation) *:focus{
+    outline: none;
+}
+
+
 .body-extender{
     width: 100%;
     height: 100%;
