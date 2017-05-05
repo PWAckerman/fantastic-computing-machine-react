@@ -10,7 +10,7 @@ import ForwardButton from './ForwardButton';
 import SettingsButton from './settings/SettingsButton';
 import './ControlsContainer.scss';
 
-export const ControlsContainer = ({playbackSpeed, setPlayback, forward, back, segments, thumb, scrubPercent, scrubCb, mute, volume, updateVolume, hideCb, showCb, open, muteCb, unmuteCb, shrink, updatePosition, fullScreen, requestFullScreen, mouseOverCb, mouseLeaveCb, controls, current, duration, play, playing, pause}) => {
+export const ControlsContainer = ({showSettings, settingsShow, playbackSpeed, setPlayback, forward, back, segments, thumb, scrubPercent, scrubCb, mute, volume, updateVolume, hideCb, showCb, open, muteCb, unmuteCb, shrink, updatePosition, fullScreen, requestFullScreen, mouseOverCb, mouseLeaveCb, controls, current, duration, play, playing, pause}) => {
     console.log('ControlsContainer', scrubPercent);
     return (
         <div
@@ -32,7 +32,9 @@ export const ControlsContainer = ({playbackSpeed, setPlayback, forward, back, se
             <ForwardButton forward={forward} />
             <BackButton back={back} />
             <SettingsButton
-                playbackSpeed={playbackSpeed} 
+                show={settingsShow}
+                showSettings={showSettings}
+                playbackSpeed={playbackSpeed}
                 setPlaybackSpeed={setPlayback}/>
             <TimeLine
                 segments={segments}

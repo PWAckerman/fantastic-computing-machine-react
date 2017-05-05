@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PageLink from '../PageLink';
+import { browserHistory } from 'react-router';
 import HeaderSpacer from '../shared/HeaderSpacer';
 import './Contact.scss';
 
@@ -23,8 +24,8 @@ export class Contact extends Component {
                     <span className="contacts-container__header__text">Contact</span>
                 </h1>
                 <div className="contacts-container__flex">
-                    <div className={["contacts-container__link1", classMap.link1].join(" ")}><PageLink linkPath="/contact/email" linkName="Email"/></div>
-                    <div className={["contacts-container__link2", classMap.link2].join(" ")}><PageLink linkPath="/contact/text" linkName="Text"/></div>
+                    <div onClick={()=> browserHistory.push("/contact/email")} className={["contacts-container__link1", classMap.link1].join(" ")}><PageLink linkPath="/contact/email" linkName="Email"/></div>
+                    <div onClick={()=> browserHistory.push("/contact/text")} className={["contacts-container__link2", classMap.link2].join(" ")}><PageLink linkPath="/contact/text" linkName="Text"/></div>
                 </div>
                 <div >{this.props.children}</div>
             </div>

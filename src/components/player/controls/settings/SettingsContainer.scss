@@ -6,4 +6,11 @@
     background-color: rgb(52, 52, 52);
     position: absolute;
     top: -196px;
+    @include element('range'){
+        height: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        position: relative;
+        width: 90%;
+    }
 }

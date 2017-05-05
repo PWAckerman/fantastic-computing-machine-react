@@ -4,9 +4,9 @@ import PlatformList from './PlatformList';
 import './ProjectContainer.scss';
 import {srcSelector} from '../../selectors/srcSelector';
 
-const ProjectContainer = ({project})=>{
+const ProjectContainer = ({project, callback})=>{
     return (
-        <div className="project">
+        <div className="project" onClick={() => project.video.length > 0 ? callback(project.title, project.video[0]) : null}>
         <div className="project__title" ><span className="project__title__text">{project.title}</span><PlatformList platformList={project.platforms}/></div>
             <div className="screenshot-block">
                 <img className="screenshot-block__screenshot" alt="src" src={srcSelector(project.screenshot)}/>

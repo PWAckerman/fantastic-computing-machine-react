@@ -24,7 +24,7 @@ class VideoModal extends Component{
                         <i className="icon-arrows-circle-remove"></i>
                     </div>
                     <div className="video-modal__container">
-                        <CustomVideoPlayer config={{errorMessage: "Custom Error Message!"}} videoSrc={'dummyVideo'} />
+                        <CustomVideoPlayer config={{errorMessage: "Custom Error Message!"}} videoSrc={this.props.videos} />
                     </div>
                 </div>
             )

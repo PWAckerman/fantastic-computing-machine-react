@@ -23,7 +23,8 @@ export class CustomVideoPlayer extends Component {
             module: 0,
             video: 0,
             playbackSpeed: 1,
-            scrubPercent: 0
+            scrubPercent: 0,
+            settings: false
         }
         this.playVideo = this.playVideo.bind(this);
         this.pauseVideo = this.pauseVideo.bind(this);
@@ -56,21 +57,9 @@ export class CustomVideoPlayer extends Component {
         this.prevModule = this.prevModule.bind(this);
         this.setPlaybackSpeed = this.setPlaybackSpeed.bind(this);
         this.stalled = this.stalled.bind(this);
-        this.modules = {
-            title: 'Test Module Title',
-            modules: [
-                {title: "Test Module 1",
-                 videos: [{title: "TestVideo1", src: "http://vjs.zencdn.net/v/oceans"}, {title: "TestVideo2", src: "http://clips.vorwaerts-gmbh.de/big_buck_bunny"}]},
-                {title: "Test Module 2",
-                 videos: [{title: "TestVideo1"}, {title: "TestVideo2"}]},
-                {title: "Test Module 3",
-                 videos: [{title: "TestVideo1"}, {title: "TestVideo2"}]},
-                {title: "Test Module 4",
-                 videos: [{title: "TestVideo1"}, {title: "TestVideo2"}]},
-                {title: "Test Module 5",
-                 videos: [{title: "TestVideo1"}, {title: "TestVideo2"}]},
-            ]
-        }
+        this.showSettings = this.showSettings.bind(this);
+        this.modules = this.props.videoSrc;
+        console.log(this.modules);
     }
 
     componentDidUpdate(){
@@ -115,6 +104,12 @@ export class CustomVideoPlayer extends Component {
         this.setState(Object.assign({}, this.state, {
             loading: false
         }));
+    }
+
+    showSettings(){
+        this.setState(Object.assign({}, this.state, {
+            settings: !this.state.settings
+        }))
     }
 
     hideLoadingComponent(){
@@ -433,6 +428,8 @@ export class CustomVideoPlayer extends Component {
                             ref={ (el) => {this.canvas = el} }>
                     </canvas>
                     <ControlsContainer
+                        showSettings={this.showSettings}
+                        settingsShow={this.state.settings}
                         playbackSpeed={this.state.playbackSpeed}
                         setPlayback={this.setPlaybackSpeed}
                         forward={this.nextVideo}

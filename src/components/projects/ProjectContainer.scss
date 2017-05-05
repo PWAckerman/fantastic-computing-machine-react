@@ -40,6 +40,7 @@
         padding-bottom: 5px;
         text-align: left;
         margin-top: 5px;
+
         @include element('text'){
             margin-left: 10px;
         }
@@ -83,13 +84,30 @@
 }
 
 .screenshot-block{
-    display: inline-block;
-    width: 300px;
-    height: auto;
-    max-height: 400px;
-    overflow-y: hidden;
+    @media #{$smartphone}{
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        overflow-y: hidden;
+    }
+    @media #{$ipad}{
+        display: inline-block;
+        width: 300px;
+        height: auto;
+        max-height: 400px;
+        overflow-y: hidden;
+    }
+    @media #{$desktop}{
+        display: inline-block;
+        width: 300px;
+        height: auto;
+        max-height: 400px;
+        overflow-y: hidden;
+    }
     @include element('screenshot'){
         width: 300px;
+        max-width: 100%;
         height: auto;
         display: inline-block;
     }
