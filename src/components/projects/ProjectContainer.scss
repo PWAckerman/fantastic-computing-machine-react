@@ -90,6 +90,7 @@
         height: auto;
         max-height: 400px;
         overflow-y: hidden;
+        position: relative;
     }
     @media #{$ipad}{
         display: inline-block;
@@ -97,6 +98,7 @@
         height: auto;
         max-height: 400px;
         overflow-y: hidden;
+        position: relative;
     }
     @media #{$desktop}{
         display: inline-block;
@@ -104,11 +106,23 @@
         height: auto;
         max-height: 400px;
         overflow-y: hidden;
+        position: relative;
+    }
+    @include element('screenshot-overlay'){
+        width: 100%;
+        position: absolute;
+        height: 400px;
+        z-index: 34;
+        background: url('http://localhost:5000/assets/images/play_button-overlay.png');
+        background-size: contain;
+        opacity: .5;
+        cursor: pointer;
     }
     @include element('screenshot'){
         width: 300px;
         max-width: 100%;
         height: auto;
         display: inline-block;
+        position: relative;
     }
 }

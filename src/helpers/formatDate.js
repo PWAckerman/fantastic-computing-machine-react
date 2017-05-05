@@ -4,5 +4,5 @@ export default function formatDate(date){
         day: "numeric", hour: "2-digit", minute: "2-digit"
       };
       var x = new Date(date);
-      return x.toLocaleTimeString("en-us", options);
+      return x.toLocaleString("en-us", options);
 }
